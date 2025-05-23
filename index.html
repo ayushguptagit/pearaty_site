@@ -9,13 +9,13 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom right, #a8edea, #fed6e3);
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
       text-align: center;
       color: #333;
+      padding: 2rem 1rem;
     }
 
     img {
@@ -36,29 +36,33 @@
       margin: 0 1rem;
     }
 
+    .spacer {
+      height: 3rem;
+    }
+
     .definition-box {
-      margin-top: 1.5rem;
-      padding: 1rem 1.5rem;
-      background: #ffffffcc;
+      margin-top: 2rem;
+      padding: 1rem 1.2rem;
+      background: rgba(255, 255, 255, 0.3);
       border-radius: 10px;
       font-family: 'Courier New', Courier, monospace;
       font-size: 1em;
-      max-width: 340px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: left;
+      max-width: 320px;
       line-height: 1.5em;
+      color: #444;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
     .definition-box strong {
       display: block;
-      font-size: 1.1em;
+      font-size: 1.05em;
       margin-bottom: 0.3em;
     }
 
     .definition-box em {
       display: block;
-      font-size: 0.9em;
-      margin-bottom: 0.8em;
+      font-size: 0.85em;
+      margin-bottom: 0.7em;
       color: #555;
     }
   </style>
@@ -67,6 +71,8 @@
   <img src="pippy.PNG" alt="Pearaty Mascot">
   <h1>Pearaty</h1>
   <p>Just a pear with big software dreams.<br>Making your stack a little sweeter.<br>Coming Soon!</p>
+
+  <div class="spacer"></div>
 
   <div class="definition-box">
     <strong>Pearaty</strong>
