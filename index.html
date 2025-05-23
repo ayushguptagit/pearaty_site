@@ -2,37 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pearaty - Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #a8edea, #fed6e3);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: #333;
       text-align: center;
+      color: #333;
     }
-    .content {
+
+    img {
+      width: 200px;
       max-width: 90%;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
+
     h1 {
       font-size: 2.5em;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.3em;
     }
+
     p {
       font-size: 1.2em;
+      margin: 0 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    <div><img src="IMG_0938.jpeg"></div>
-    <h1>Pearaty</h1>
-    <p>We are working on something special.<br>Stay tuned!</p>
-  </div>
+  <img src="IMG_0938.jpeg" alt="Pearaty Mascot">
+  <h1>Pearaty</h1>
+  <p>We are working on something special.<br>Stay tuned!</p>
 </body>
 </html>
