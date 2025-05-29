@@ -5,30 +5,51 @@
   <title>Pearaty - Coming Soon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #d1f7c4, #a0e8af, #7fd8be, #6eceda);
       min-height: 100vh;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Header image spanning full width */
+    #header {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    /* Subtle glow at bottom of header */
+    #header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+      z-index: 1;
+    }
+
+    .content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
-      color: #333;
-      padding: 1rem 1rem;
+      padding: 1rem;
+      position: relative;
+      z-index: 2;
     }
 
-    #header {
-      margin-top: 0px;
-      width: 100%;
-    }
-
-     .logo {
+    .logo {
       font-weight: 700;
       letter-spacing: 1px;
       color: #1c1c1e;
-     }
+    }
 
     #pippy {
       width: 300px;
@@ -89,38 +110,40 @@
       margin-top: 4rem;
     }
 
-   .footer {
-  width: 100%;
-  margin-top: auto;
-  font-size: 10px;
-  color: #666;
-  padding: 2rem 0 1rem;
-  line-height: 1.6em;
-}
+    .footer {
+      width: 100%;
+      margin-top: auto;
+      font-size: 10px;
+      color: #666;
+      padding: 2rem 0 1rem;
+      line-height: 1.6em;
+    }
   </style>
 </head>
 <body>
-  <img id="header" src="logo.jpg">
-  <!--<div class="logo"><span style="font-size: 2.2rem">P</span><span style="font-size: 2rem">EARATY</span></div>-->
-  <img id="pippy" src="pippy.PNG" alt="Pearaty Mascot">
-  <p>Just a pear with big software dreams.<br>Making your stack a little sweeter.<br><b>Coming Soon!</b></p>
+  <img id="header" src="logo.jpg" alt="Pearaty Header">
 
-  <div class="spacer"></div>
+  <div class="content">
+    <img id="pippy" src="pippy.PNG" alt="Pearaty Mascot">
+    <p>Just a pear with big software dreams.<br>Making your stack a little sweeter.<br><b>Coming Soon!</b></p>
 
-  <div class="definition-box">
-    <strong>Pearaty</strong>
-    <em>/ˈper-ə-tē/ &nbsp;&nbsp; noun</em>
-    The subtle art of maintaining parity where it matters — making complex workflows feel simple, often accompanied by a helpful pear named Pippy.
-  </div>
+    <div class="spacer"></div>
 
-  <hr>
-  <div class="footer">
-  <script>
-     const user = "contact";
-     const domain = "pearaty.com";
-     document.write(`${user}@${domain}`);
-  </script><br>
-    © 2025 Pearaty. All rights reserved.
+    <div class="definition-box">
+      <strong>Pearaty</strong>
+      <em>/ˈper-ə-tē/ &nbsp;&nbsp; noun</em>
+      The subtle art of maintaining parity where it matters — making complex workflows feel simple, often accompanied by a helpful pear named Pippy.
+    </div>
+
+    <hr>
+    <div class="footer">
+      <script>
+        const user = "contact";
+        const domain = "pearaty.com";
+        document.write(`${user}@${domain}`);
+      </script><br>
+      © 2025 Pearaty. All rights reserved.
+    </div>
   </div>
 </body>
 </html>
