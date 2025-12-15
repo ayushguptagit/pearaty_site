@@ -92,14 +92,31 @@
   padding: 2rem 0 1rem;
   line-height: 1.6em;
 }
+
+    #contact-link {
+  color: #1c6f4a;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#contact-link:hover {
+  opacity: 0.85;
+}
   </style>
 </head>
 <body>
 <!--   <div class="logo"><span style="font-size: 2.2rem">P</span><span style="font-size: 2rem">EARATY</span></div> -->
   <br/>
   <img id="pippy" src="splash.png" alt="Pearaty Mascot">
-  <p><b>Code moves fast. Documentation doesn't.</b><br>Pearaty bridges the gap by keeping your docs in sync with deployed code.<br>No more outdated docs. No more misaligned teams.<br><b>Coming Soon!</b></p>
-
+<p>
+  <b>Code moves fast. Documentation doesn't.</b><br>
+  Pearaty bridges the gap by keeping your docs in sync with deployed code.<br>
+  No more outdated docs. No more misaligned teams.<br>
+  <b>
+    Curious about how Pearaty works?
+    <a href="#" id="contact-link">Contact us to learn more!</a>
+  </b>
+</p>
   <div class="spacer"></div>
 
   <div class="definition-box">
@@ -110,12 +127,24 @@
 
   <hr>
   <div class="footer">
-  <script>
-     const user = "contact";
-     const domain = "pearaty.com";
-     document.write(`${user}@${domain}`);
-  </script><br>
-    © 2025 Pearaty. All rights reserved.
-  </div>
+  <span id="contact-email"></span><br>
+  © 2025 Pearaty. All rights reserved.
+</div>
+
+<script>
+  (function () {
+    const user = "contact";
+    const domain = "pearaty.com";
+    const email = user + "@" + domain;
+    const emailSpan = document.getElementById("contact-email");
+    emailSpan.textContent = email;
+
+    const contactLink = document.getElementById("contact-link");
+    contactLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "mailto:" + email;
+    });
+  })();
+</script>
 </body>
 </html>
