@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pearaty - Coming Soon</title>
+  <title>Pearaty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
 
+  <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -19,24 +19,12 @@
       padding: 2rem 1rem;
     }
 
-     .logo {
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #1c1c1e;
-     }
-
     #pippy {
       width: 550px;
       max-width: 100%;
-/*       margin: 1rem; */
       margin-bottom: 1.3em;
       border-radius: 25px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.3em;
     }
 
     p {
@@ -49,6 +37,55 @@
       height: 3rem;
     }
 
+    /* Capabilities */
+    .capabilities-title {
+      font-size: 1.15em;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .capabilities {
+      max-width: 900px;
+      margin: 0 auto 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .capability-card {
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 14px;
+      padding: 1.6rem 1.4rem;
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
+    }
+
+    .capability-card h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.1em;
+      color: #1c1c1e;
+    }
+
+    .capability-card p {
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.5em;
+      color: #444;
+    }
+
+    /* CTA */
+    #contact-link {
+      color: #1c6f4a;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    #contact-link:hover {
+      opacity: 0.85;
+    }
+
+    /* Definition */
     .definition-box {
       text-align: left;
       margin-top: 2rem;
@@ -84,90 +121,99 @@
       margin-top: 4rem;
     }
 
-   .footer {
-  width: 100%;
-  margin-top: auto;
-  font-size: 13px;
-  color: #666;
-  padding: 2rem 0 1rem;
-  line-height: 1.6em;
-}
-
-    #contact-link {
-  color: #1c6f4a;
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-#contact-link:hover {
-  opacity: 0.85;
-}
-
-    .capabilities {
-      max-width: 760px;
+    .footer {
+      width: 100%;
+      margin-top: auto;
+      font-size: 13px;
+      color: #666;
+      padding: 2rem 0 1rem;
+      line-height: 1.6em;
     }
   </style>
 </head>
+
 <body>
-<!--   <div class="logo"><span style="font-size: 2.2rem">P</span><span style="font-size: 2rem">EARATY</span></div> -->
-  <br/>
+
   <img id="pippy" src="splash.png" alt="Pearaty Mascot">
-<p>
-  <b>Code moves fast. Documentation doesn't.</b><br>
-  Pearaty bridges the gap by keeping your docs in sync with deployed code.<br>
-  No more outdated docs. No more misaligned teams.
-</p>
-    <div class="spacer"></div>
+
+  <p>
+    <b>Code moves fast. Documentation doesn't.</b><br>
+    Pearaty bridges the gap by keeping your docs in sync with deployed code.<br>
+    No more outdated docs. No more misaligned teams.
+  </p>
+
+  <div class="spacer"></div>
+
+  <p class="capabilities-title">
+    How Pearaty keeps documentation in sync
+  </p>
+
   <div class="capabilities">
-<p>
-    Pearaty integrates directly with your code repository to track code pushes in real time.
-  </p>
+
+    <div class="capability-card">
+      <h3>Real-time code awareness</h3>
+      <p>
+        Pearaty integrates directly with your code repository to track code pushes
+        as they happen — no polling, no lag, no manual triggers.
+      </p>
+    </div>
+
+    <div class="capability-card">
+      <h3>Cross-system documentation intelligence</h3>
+      <p>
+        For every change, Pearaty identifies all relevant technical documentation
+        across documentation stores like Confluence, Google Docs, and more.
+      </p>
+    </div>
+
+    <div class="capability-card">
+      <h3>Precise, reviewable AI suggestions</h3>
+      <p>
+        Using advanced generative LLM systems, Pearaty produces
+        <b>granular, context-aware update suggestions</b> that engineers can
+        quickly review and apply with confidence.
+      </p>
+    </div>
+
+  </div>
 
   <p>
-    For each change, it intelligently identifies all relevant technical documentation
-    across documentation stores like Confluence, Google Docs, and more.
+    <b>
+      Curious about how Pearaty works?<br>
+      <a href="#" id="contact-link">Contact us to learn more!</a>
+    </b>
   </p>
 
-  <p>
-    Using advanced generative LLM systems, Pearaty generates
-    <b>granular, context-aware update suggestions</b> that engineers can quickly
-    review and apply.
-  </p>
-</div>
-  <p>
-  <b>
-    Curious about how Pearaty works?<br>
-    <a href="#" id="contact-link">Contact us to learn more!</a>
-  </b>
-</p>
   <div class="spacer"></div>
 
   <div class="definition-box">
     <strong>Pearaty</strong>
     <em>/ˈper-ə-tē/ &nbsp;&nbsp; noun</em>
-    The subtle art of maintaining parity where it matters — making complex workflows feel simple, often accompanied by a helpful pear named Pippy.
+    The subtle art of maintaining parity where it matters — making complex workflows
+    feel simple, often accompanied by a helpful pear named Pippy.
   </div>
 
   <hr>
+
   <div class="footer">
-  <span id="contact-email"></span><br>
-  © 2025 Pearaty. All rights reserved.
-</div>
+    <span id="contact-email"></span><br>
+    © 2025 Pearaty. All rights reserved.
+  </div>
 
-<script>
-  (function () {
-    const user = "contact";
-    const domain = "pearaty.com";
-    const email = user + "@" + domain;
-    const emailSpan = document.getElementById("contact-email");
-    emailSpan.textContent = email;
+  <script>
+    (function () {
+      const user = "contact";
+      const domain = "pearaty.com";
+      const email = user + "@" + domain;
 
-    const contactLink = document.getElementById("contact-link");
-    contactLink.addEventListener("click", function (e) {
-      e.preventDefault();
-      window.location.href = "mailto:" + email;
-    });
-  })();
-</script>
+      document.getElementById("contact-email").textContent = email;
+
+      document.getElementById("contact-link").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "mailto:" + email;
+      });
+    })();
+  </script>
+
 </body>
 </html>
