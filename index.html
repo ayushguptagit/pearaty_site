@@ -157,6 +157,22 @@
       padding: 2rem 0 1rem;
       line-height: 1.6em;
     }
+
+    @media (max-width: 768px) {
+    .capabilities {
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+  
+    .capability-card {
+      padding: 2rem 1.5rem;
+    }
+  
+    .capability-step {
+      top: 1rem;
+      right: 1.2rem;
+    }
+  }
   </style>
 </head>
 
@@ -169,16 +185,18 @@
     Pearaty bridges the gap by keeping your docs in sync with deployed code.<br>
     No more outdated docs. No more misaligned teams.
   </p>
-    <div class="spacer"></div>
+  
+  <div class="spacer"></div>
 
   <div class="section-divider"></div>
 
   <p class="capabilities-title">
     How Pearaty Works
   </p>
-<br>
+  
+  <br>
+  
   <div class="capabilities">
-
     <div class="capability-card">
       <h3>Real-time code awareness</h3>
       <p>
@@ -204,7 +222,9 @@
       </p>
     </div>
   </div>
-    <div class="section-divider"></div>
+  
+  <div class="section-divider"></div>  
+  
   <p>
     <b>
       <a href="#" id="contact-link">Contact us to learn more!</a>
