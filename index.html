@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -53,6 +53,22 @@
         opacity: 0.85;
       }
 
+      /* Diagram Styling */
+      .diagram-container {
+        max-width: 1000px;
+        width: 100%;
+        margin: 1rem auto 3rem;
+        padding: 0 0rem;
+      }
+
+      .workflow-diagram {
+        width: 100%;
+        height: auto;
+        border-radius: 30px; /* High-radius for that snazzy look */
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        display: block;
+      }
+
       /* Capabilities grid */
       .capabilities {
         max-width: 900px;
@@ -70,7 +86,9 @@
         text-align: left;
         box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(8px);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
       }
 
       .capability-card:hover {
@@ -173,6 +191,10 @@
         .capability-card {
           padding: 2rem 1.5rem;
         }
+
+        .workflow-diagram {
+          border-radius: 20px;
+        }
       }
     </style>
   </head>
@@ -190,7 +212,18 @@
     <div class="section-divider"></div>
 
     <p class="capabilities-title">How Pearaty Works</p>
-    <br />
+
+    <div class="diagram-container">
+      <picture>
+        <source srcset="pearaty-flow-mobile.jpg" media="(max-width: 600px)" />
+        <img
+          src="pearaty-flow.png"
+          alt="Pearaty Workflow Diagram"
+          class="workflow-diagram"
+        />
+      </picture>
+    </div>
+
     <div class="capabilities">
       <div class="capability-card">
         <h3>Real-time code awareness</h3>
@@ -237,7 +270,7 @@
 
     <hr />
 
-    <div class="footer">© 2025 Pearaty. All rights reserved.</div>
+    <div class="footer">© 2026 Pearaty. All rights reserved.</div>
 
     <script>
       (function () {
