@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 4rem;
+      }
+
       body {
         margin: 0;
         font-family: "Segoe UI", sans-serif;
@@ -16,12 +21,42 @@
         align-items: center;
         text-align: center;
         color: #185d2b;
-        padding: 2rem 1rem;
+        padding: 0 1rem 2rem; /* Adjusted top padding for navbar space */
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        position: sticky;
+        top: 1rem;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        padding: 0.6rem 1.8rem;
+        margin-top: 1.5rem;
+        display: flex;
+        gap: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: #185d2b;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: opacity 0.2s ease;
+      }
+
+      .navbar a:hover {
+        opacity: 0.6;
       }
 
       #pippy {
         width: 550px;
         max-width: 100%;
+        margin-top: 2rem; /* Added margin since navbar is now above */
         margin-bottom: 1.3em;
         border-radius: 25px;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -41,7 +76,8 @@
       .capabilities-title {
         font-size: 1.2em;
         font-weight: 600;
-        margin-bottom: 0.6rem;
+        margin-bottom: 2.3rem;
+        scroll-margin-top: 6rem; /* Ensures title isn't hidden behind sticky nav */
       }
 
       .section-divider {
@@ -57,14 +93,13 @@
       .diagram-container {
         max-width: 1000px;
         width: 100%;
-        margin: 1rem auto 3rem;
-        padding: 0 0rem;
+        margin: 0rem auto 1.5rem;
       }
 
       .workflow-diagram {
         width: 100%;
         height: auto;
-        border-radius: 30px; /* High-radius for that snazzy look */
+        border-radius: 30px;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         display: block;
       }
@@ -72,7 +107,7 @@
       /* Capabilities grid */
       .capabilities {
         max-width: 900px;
-        margin: 0 auto 2.5rem;
+        margin: 0 auto 2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 1.8rem;
@@ -121,12 +156,12 @@
           rgba(220, 245, 230, 0.95),
           rgba(190, 235, 215, 0.95)
         );
-
         border: 1px solid rgba(28, 111, 74, 0.35);
         border-radius: 20px;
         text-decoration: none;
         backdrop-filter: blur(6px);
         transition: all 0.25s ease;
+        scroll-margin-top: 10rem;
       }
 
       #contact-button:hover {
@@ -182,7 +217,16 @@
         line-height: 1.6em;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       @media (max-width: 768px) {
+        .navbar {
+          gap: 1.2rem;
+          padding: 0.6rem 1.2rem;
+        }
+
         .capabilities {
           grid-template-columns: 1fr;
           gap: 1.4rem;
@@ -191,15 +235,18 @@
         .capability-card {
           padding: 2rem 1.5rem;
         }
-
-        .workflow-diagram {
-          border-radius: 20px;
-        }
       }
     </style>
   </head>
 
   <body>
+    <nav class="navbar">
+      <a href="#top">Home</a>
+      <a href="#how-it-works">How it Works</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
     <img id="pippy" src="splash.png" alt="Pearaty Mascot" />
 
     <p>
@@ -211,7 +258,7 @@
 
     <div class="section-divider"></div>
 
-    <p class="capabilities-title">How Pearaty Works</p>
+    <p class="capabilities-title" id="how-it-works">How Pearaty Works</p>
 
     <div class="diagram-container">
       <picture>
@@ -224,7 +271,11 @@
       </picture>
     </div>
 
-    <div class="capabilities">
+    <div class="section-divider"></div>
+
+    <p class="capabilities-title" id="features">Features</p>
+
+    <div class="capabilities" id="capabilities">
       <div class="capability-card">
         <h3>Real-time code awareness</h3>
         <p>
@@ -257,7 +308,10 @@
 
     <div class="section-divider"></div>
 
-    <a href="#" id="contact-button">Contact us to learn more</a>
+    <a href="#" id="contact-button" class="anchor-contact"
+      >Contact us to learn more</a
+    >
+    <div id="contact"></div>
 
     <div class="spacer"></div>
 
