@@ -2,343 +2,424 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Pearaty</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Pearaty | Eliminate Knowledge Debt & Automate Documentation Parity
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <style>
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 4rem;
-      }
-
       body {
-        margin: 0;
-        font-family: "Segoe UI", sans-serif;
-        background: linear-gradient(135deg, #d1f7c4, #a0e8af, #7fd8be, #6eceda);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        color: #185d2b;
-        padding: 0 1rem 2rem; /* Adjusted top padding for navbar space */
+        font-family: "Inter", sans-serif;
       }
-
-      /* Navigation Bar */
-      .navbar {
-        position: sticky;
-        top: 1rem;
-        z-index: 1000;
-        background: rgba(255, 255, 255, 0.35);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 50px;
-        padding: 0.6rem 1.8rem;
-        margin-top: 1.5rem;
-        display: flex;
-        gap: 2rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+      .gradient-text {
+        background: linear-gradient(90deg, #10b981, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
-
-      .navbar a {
-        text-decoration: none;
-        color: #185d2b;
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition: opacity 0.2s ease;
-      }
-
-      .navbar a:hover {
-        opacity: 0.6;
-      }
-
-      #pippy {
-        width: 550px;
-        max-width: 100%;
-        margin-top: 2rem; /* Added margin since navbar is now above */
-        margin-bottom: 1.3em;
-        border-radius: 25px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      p {
-        font-size: 1.2em;
-        margin: 0 1rem;
-        line-height: 1.6em;
-      }
-
-      .spacer {
-        height: 3rem;
-      }
-
-      /* Section title */
-      .capabilities-title {
-        font-size: 1.2em;
-        font-weight: 600;
-        margin-bottom: 2.3rem;
-        scroll-margin-top: 6rem; /* Ensures title isn't hidden behind sticky nav */
-      }
-
-      .section-divider {
-        width: 60px;
-        height: 4px;
-        margin: 2rem auto;
-        border-radius: 2px;
-        background: linear-gradient(90deg, #1c6f4a, #4fb286);
-        opacity: 0.85;
-      }
-
-      /* Diagram Styling */
-      .diagram-container {
-        max-width: 1000px;
-        width: 100%;
-        margin: 0rem auto 1.5rem;
-      }
-
-      .workflow-diagram {
-        width: 100%;
-        height: auto;
-        border-radius: 30px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-        display: block;
-      }
-
-      /* Capabilities grid */
-      .capabilities {
-        max-width: 900px;
-        margin: 0 auto 2rem;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 1.8rem;
-      }
-
-      .capability-card {
-        position: relative;
-        background: rgba(255, 255, 255, 0.45);
-        border-radius: 16px;
-        padding: 2.4rem 1.7rem 2rem;
-        text-align: left;
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(8px);
-        transition:
-          transform 0.25s ease,
-          box-shadow 0.25s ease;
-      }
-
-      .capability-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
-      }
-
-      .capability-card h3 {
-        margin: 0 0 0.8rem;
-        font-size: 1em;
-        font-weight: 600;
-      }
-
-      .capability-card p {
-        margin: 0;
-        font-size: 1em;
-        line-height: 1.5em;
-      }
-
-      /* CTA Button */
-      #contact-button {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: 0.75rem 1.8rem;
-        font-size: 1rem;
-        font-weight: 600;
-        color: inherit;
-        background: linear-gradient(
-          135deg,
-          rgba(220, 245, 230, 0.95),
-          rgba(190, 235, 215, 0.95)
-        );
-        border: 1px solid rgba(28, 111, 74, 0.35);
-        border-radius: 20px;
-        text-decoration: none;
-        backdrop-filter: blur(6px);
-        transition: all 0.25s ease;
-        scroll-margin-top: 10rem;
-      }
-
-      #contact-button:hover {
-        background: linear-gradient(
-          135deg,
-          rgba(235, 250, 240, 1),
-          rgba(205, 240, 225, 1)
-        );
-        transform: translateY(-2px);
-        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.14);
-      }
-
-      /* Definition box */
-      .definition-box {
-        text-align: left;
-        margin-top: 2rem;
-        padding: 1rem 1.2rem;
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 10px;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 1em;
-        max-width: 320px;
-        line-height: 1.5em;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      }
-
-      .definition-box strong {
-        display: block;
-        font-size: 1.05em;
-        margin-bottom: 0.3em;
-      }
-
-      .definition-box em {
-        display: block;
-        font-size: 0.85em;
-        margin-bottom: 0.7em;
-      }
-
-      hr {
-        width: 80%;
-        max-width: 400px;
-        border: none;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        margin-top: 4rem;
-      }
-
-      .footer {
-        width: 100%;
-        margin-top: auto;
-        font-size: 13px;
-        color: #666;
-        padding: 2rem 0 1rem;
-        line-height: 1.6em;
-      }
-
       html {
         scroll-behavior: smooth;
       }
 
+      [id] {
+        scroll-margin-top: 50px;
+      }
+
+      /* Modal Styling */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(8px);
+        cursor: zoom-out;
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 90%;
+        max-width: 1100px;
+        max-height: 90vh;
+        object-fit: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 12px;
+      }
+
+      /* Fixed Mobile Menu Fade */
+      #mobile-menu {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease-in-out;
+      }
+      #mobile-menu.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @media (min-width: 769px) {
+        .clickable-img {
+          cursor: zoom-in;
+          transition: transform 0.3s ease;
+        }
+        .clickable-img:hover {
+          transform: scale(1.02);
+        }
+        .expand-hint {
+          display: block;
+        }
+      }
       @media (max-width: 768px) {
-        .navbar {
-          gap: 1.2rem;
-          padding: 0.6rem 1.2rem;
-        }
-
-        .capabilities {
-          grid-template-columns: 1fr;
-          gap: 1.4rem;
-        }
-
-        .capability-card {
-          padding: 2rem 1.5rem;
+        .expand-hint {
+          display: none;
         }
       }
     </style>
   </head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <div id="imageModal" class="modal">
+      <img class="modal-content" id="modalImg" />
+    </div>
 
-  <body>
-    <nav class="navbar">
-      <a href="#top">Home</a>
-      <a href="#how-it-works">How it Works</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Contact</a>
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-[60] bg-slate-900/40 backdrop-blur-sm md:hidden"
+    >
+      <div
+        class="bg-white w-full shadow-2xl rounded-b-3xl overflow-hidden flex flex-col"
+      >
+        <div class="px-6 h-20 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div
+              class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-white font-bold text-sm"
+            >
+              P
+            </div>
+            <span class="text-xl font-extrabold tracking-tight">Pearaty</span>
+          </div>
+          <button id="close-menu" class="text-slate-600 p-2">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <div
+          class="flex flex-col gap-6 px-6 pb-8 text-lg font-semibold text-slate-800"
+        >
+          <a
+            href="#top"
+            class="mobile-link hover:text-emerald-600 transition flex items-center justify-between"
+            >Home <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i
+          ></a>
+          <a
+            href="#problem"
+            class="mobile-link hover:text-emerald-600 transition flex items-center justify-between"
+            >The Problem
+            <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i
+          ></a>
+          <a
+            href="#how-it-works"
+            class="mobile-link hover:text-emerald-600 transition flex items-center justify-between"
+            >How it Works
+            <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i
+          ></a>
+          <a
+            href="#contact"
+            class="mobile-link hover:text-emerald-600 transition flex items-center justify-between"
+            >Contact
+            <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-white font-bold"
+          >
+            P
+          </div>
+          <span class="text-xl font-extrabold tracking-tight">Pearaty</span>
+        </div>
+
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600"
+        >
+          <a href="#top" class="hover:text-emerald-600 transition">Home</a>
+          <a href="#problem" class="hover:text-emerald-600 transition"
+            >The Problem</a
+          >
+          <a href="#how-it-works" class="hover:text-emerald-600 transition"
+            >How it Works</a
+          >
+          <a href="#contact" class="hover:text-emerald-600 transition"
+            >Contact</a
+          >
+        </div>
+
+        <button id="menu-toggle" class="md:hidden text-slate-600 p-2">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
     </nav>
 
-    <img id="pippy" src="splash.png" alt="Pearaty Mascot" />
-
-    <p>
-      <b>Code moves fast. Documentation doesn't.</b><br />
-      Pearaty bridges the gap by keeping your docs in sync with deployed
-      code.<br />
-      No more outdated docs. No more misaligned teams.
-    </p>
-
-    <div class="section-divider"></div>
-
-    <p class="capabilities-title" id="how-it-works">How Pearaty Works</p>
-
-    <div class="diagram-container">
-      <picture>
-        <source srcset="pearaty-flow-mobile.jpg" media="(max-width: 600px)" />
-        <img
-          src="pearaty-flow.png"
-          alt="Pearaty Workflow Diagram"
-          class="workflow-diagram"
-        />
-      </picture>
-    </div>
-
-    <div class="section-divider"></div>
-
-    <p class="capabilities-title" id="features">Features</p>
-
-    <div class="capabilities" id="capabilities">
-      <div class="capability-card">
-        <h3>Real-time code awareness</h3>
-        <p>
-          Pearaty integrates directly with your code repository — including
-          platforms like GitHub and GitLab — to track code pushes as they happen
-          — no polling, no lag, no manual triggers.
+    <header class="pt-20 pb-12 px-6">
+      <div class="max-w-5xl mx-auto text-center">
+        <h1
+          class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.1]"
+        >
+          Your Code Moves Fast. <br />
+          <span class="gradient-text">Your Docs Should Too.</span>
+        </h1>
+        <p
+          class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
+        >
+          Eliminate the "Knowledge Tax" on your engineering team. Pearaty keeps
+          your technical documentation in perfect sync with deployed
+          code—automatically.
         </p>
       </div>
+    </header>
 
-      <div class="capability-card">
-        <h3>Cross-system documentation intelligence</h3>
-        <p>
-          For every change, Pearaty uses its proprietary AI-powered
-          document-matching engine to intelligently determine all relevant
-          technical documentation across documentation stores like Confluence,
-          Google Docs, and more.
+    <section class="py-12 border-y border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <p
+          class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-8"
+        >
+          Seamlessly Integrates With Your Stack
         </p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-6 md:gap-16 opacity-60 grayscale"
+        >
+          <span class="font-bold text-lg md:text-xl text-slate-900"
+            >GITHUB</span
+          >
+          <span class="font-bold text-lg md:text-xl text-slate-900"
+            >GITLAB</span
+          >
+          <span class="font-bold text-lg md:text-xl text-slate-900"
+            >CONFLUENCE</span
+          >
+          <span class="font-bold text-lg md:text-xl text-slate-900"
+            >GOOGLE DOCS</span
+          >
+        </div>
       </div>
+    </section>
 
-      <div class="capability-card">
-        <h3>Precise, reviewable AI suggestions</h3>
-        <p>
-          Using advanced generative LLM systems, Pearaty produces
-          <b>context-aware update suggestions</b> for relevant technical
-          documentation — surfaced through a clean, powerful dashboard where
-          engineers can quickly review and apply changes with confidence.
-        </p>
-      </div>
+    <div id="problem">
+      <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Outdated Docs are a Business Risk.
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8 text-left mt-16">
+            <div
+              class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm"
+            >
+              <div
+                class="w-12 h-12 bg-red-50 text-red-600 rounded-lg flex items-center justify-center mb-6"
+              >
+                <i data-lucide="clock"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">
+                Wasted Senior Hours
+              </h3>
+              <p class="text-slate-600">
+                Manual architecture alignment sucks 20% of your top talent's
+                focus.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm"
+            >
+              <div
+                class="w-12 h-12 bg-orange-50 text-orange-600 rounded-lg flex items-center justify-center mb-6"
+              >
+                <i data-lucide="users"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">
+                Onboarding Friction
+              </h3>
+              <p class="text-slate-600">
+                Stale Wikis double the time it takes for new hires to ship code.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm"
+            >
+              <div
+                class="w-12 h-12 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center mb-6"
+              >
+                <i data-lucide="alert-triangle"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">
+                Incident Risk
+              </h3>
+              <p class="text-slate-600">
+                30% of outages are prolonged by engineers following outdated
+                guides.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <div class="section-divider"></div>
+    <section id="how-it-works" class="py-24 bg-slate-900 text-white px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl font-bold mb-8 leading-tight">
+              Keep Parity Where it Matters.
+            </h2>
+            <div class="space-y-8">
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-sm"
+                >
+                  1
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold mb-2 text-emerald-400">
+                    Real-time Awareness
+                  </h4>
+                  <p class="text-slate-400">
+                    Tracks GitHub/GitLab pushes instantly—no manual triggers.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-sm"
+                >
+                  2
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold mb-2 text-emerald-400">
+                    Doc-Intelligence
+                  </h4>
+                  <p class="text-slate-400">
+                    Automatically locates relevant Confluence or Google Docs
+                    pages.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-slate-800 rounded-3xl p-4 border border-slate-700 shadow-2xl"
+          >
+            <picture>
+              <source
+                srcset="pearaty-flow-mobile.jpg"
+                media="(max-width: 600px)"
+              />
+              <img
+                id="flowImage"
+                src="pearaty-flow.png"
+                alt="Pearaty Workflow"
+                class="w-full h-auto rounded-2xl clickable-img"
+              />
+            </picture>
+            <p
+              class="expand-hint text-center text-slate-500 text-xs mt-3 uppercase tracking-widest"
+            >
+              Click to Expand
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <a href="#" id="contact-button" class="anchor-contact"
-      >Contact us to learn more</a
-    >
-    <div id="contact"></div>
-
-    <div class="spacer"></div>
-
-    <div class="definition-box">
-      <strong>Pearaty</strong>
-      <em>/ˈper-ə-tē/ &nbsp;&nbsp; noun</em>
-      The subtle art of maintaining parity where it matters — making complex
-      workflows feel simple, often accompanied by a helpful pear named Pippy.
-    </div>
-
-    <hr />
-
-    <div class="footer">© 2026 Pearaty. All rights reserved.</div>
+    <footer class="py-24 px-6 text-center">
+      <div id="contact" class="max-w-3xl mx-auto">
+        <button
+          id="contact-button"
+          class="bg-emerald-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-emerald-700 shadow-2xl shadow-emerald-200 transition-all"
+        >
+          Contact us to learn more
+        </button>
+        <div
+          class="mt-20 pt-8 border-t border-slate-200 text-slate-400 text-sm"
+        >
+          &copy; 2026 Pearaty. All rights reserved.
+        </div>
+      </div>
+    </footer>
 
     <script>
-      (function () {
-        const user = "contact";
-        const domain = "pearaty.com";
-        const email = user + "@" + domain;
+      lucide.createIcons();
 
-        document
-          .getElementById("contact-button")
-          .addEventListener("click", function (e) {
+      // Mobile Menu Logic
+      const menuToggle = document.getElementById("menu-toggle");
+      const closeMenu = document.getElementById("close-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      const openMenu = () => {
+        mobileMenu.classList.add("active");
+        document.body.style.overflow = "hidden";
+      };
+
+      const hideMenu = () => {
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "auto";
+      };
+
+      menuToggle.addEventListener("click", openMenu);
+      closeMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+        hideMenu();
+      });
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target === mobileMenu) hideMenu();
+      });
+      mobileLinks.forEach((link) => link.addEventListener("click", hideMenu));
+
+      // Email logic
+      (function () {
+        const email = "contact@pearaty.com";
+        const btn = document.getElementById("contact-button");
+        if (btn) {
+          btn.addEventListener("click", (e) => {
             e.preventDefault();
             window.location.href = "mailto:" + email;
           });
+        }
       })();
+
+      // Modal Logic
+      const modal = document.getElementById("imageModal");
+      const img = document.getElementById("flowImage");
+      const modalImg = document.getElementById("modalImg");
+
+      img.onclick = function () {
+        if (window.innerWidth > 768) {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          document.body.style.overflow = "hidden";
+        }
+      };
+      modal.onclick = function () {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      };
     </script>
   </body>
 </html>
