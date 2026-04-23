@@ -110,9 +110,9 @@
             >Home <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i
           ></a>
           <a
-            href="#utility"
+            href="#capabilities"
             class="mobile-link hover:text-emerald-600 transition flex items-center justify-between"
-            >The Utility
+            >Capabilities
             <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i
           ></a>
           <a
@@ -149,8 +149,8 @@
           class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600"
         >
           <a href="#top" class="hover:text-emerald-600 transition">Home</a>
-          <a href="#utility" class="hover:text-emerald-600 transition"
-            >The Utility</a
+          <a href="#capabilities" class="hover:text-emerald-600 transition"
+            >Capabilities</a
           >
           <a href="#how-it-works" class="hover:text-emerald-600 transition"
             >How it Works</a
@@ -171,7 +171,7 @@
           class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.15]"
         >
           Stop paying the 25% <br />
-          <span class="gradient-text">Documentation Tax.</span>
+          <span class="gradient-text">Documentation Tax</span>
         </h1>
 
         <p class="text-lg md:text-xl text-slate-600 font-medium mb-12">
@@ -304,20 +304,18 @@
     </section> -->
 
     <section
-      id="utility"
-      class="py-20 px-6 border-y border-slate-200 bg-slate-100"
+      id="capabilities"
+      class="py-16 px-6 border-y border-slate-200 bg-slate-100"
     >
       <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          The Pearaty Utility Set
+        <h2
+          class="text-2xl md:text-5xl font-bold mb-8 leading-tight text-slate-900"
+        >
+          Documentation for<br />
+          <span class="text-emerald-600">High-Velocity, Agile Teams</span>
         </h2>
-        <p class="text-slate-600 mb-16 max-w-2xl mx-auto">
-          Moving beyond static files to a system that understands the nuance and
-          evolution of your codebase.
-        </p>
-
-        <div class="grid md:grid-cols-3 gap-8 text-left">
-          <div
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left">
+          <!-- <div
             class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
           >
             <div
@@ -329,17 +327,15 @@
               Project Context Synthesis
             </h3>
             <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-              The first few days of any new feature are usually spent in
-              "archaeology mode"—hunting through old PRs, digging up requirement
-              docs, and cross-referencing Slack threads. Pearaty does this
-              reconnaissance for you, synthesizing your project's history into a
-              structured technical baseline so you can start building
-              immediately.
+              Skip the "archaeology mode." Pearaty automatically synthesizes
+              fragmented project history and requirements into a structured
+              technical baseline for every new feature, saving you from the
+              overhead of manual research just to start.
             </p>
-          </div>
+          </div> -->
 
           <div
-            class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
+            class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md border-blue-100"
           >
             <div
               class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6"
@@ -350,12 +346,11 @@
               Logic-to-Doc Parity
             </h3>
             <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-              Documentation typically dies the moment the code is merged.
-              Pearaty treats your documentation like a live build artifact. By
-              monitoring logic shifts in your codebase, it identifies when a
-              "truth" has changed and prepares the necessary updates, ensuring
-              your knowledge base evolves in lockstep with your production
-              environment.
+              Documentation drifts because it can’t keep up with
+              development—whether a change is driven by an urgent hotfix, a
+              Slack decision, or an "off-the-books" request. Pearaty identifies
+              when the technical truth has shifted in real-time, ensuring your
+              knowledge base maintains permanent parity.
             </p>
           </div>
 
@@ -371,24 +366,41 @@
               Self-Serve Technical Truth
             </h3>
             <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-              When documentation is stale, engineers become the "human search
-              engine" for the rest of the company. Pearaty provides architects,
-              product managers, and support leads with a reliable, updated map
-              of how the system works. This empowers stakeholders to find their
-              own answers, protecting your team's deep-work hours.
+              Stop being a human search engine. Pearaty provides architects and
+              stakeholders with a reliable, updated map of current system
+              behavior, allowing them to find their own answers independently
+              without interrupting your deep-work hours.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
+          >
+            <div
+              class="w-12 h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i data-lucide="bot" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">
+              AI Agent Ready
+            </h3>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+              AI Agents are only as helpful as the information they can access.
+              Pearaty keeps your project’s knowledge base in sync with your
+              latest changes, so your AI tools have the right context to provide
+              accurate help without you having to constantly correct them.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="how-it-works" class="py-24 bg-slate-900 text-white px-6">
+    <section id="how-it-works" class="py-16 bg-slate-900 text-white px-6">
       <div class="max-w-4xl mx-auto text-center">
         <h2
-          class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-white"
+          class="text-2xl md:text-5xl font-bold mb-8 leading-tight text-white"
         >
           Automating the Path to <br />
-          <span class="text-emerald-400">Technical Clarity.</span>
+          <span class="text-emerald-400">Technical Clarity</span>
         </h2>
         <p class="text-slate-400 text-lg mb-16 max-w-2xl mx-auto">
           From initial discovery to long-term parity, Pearaty manages the
@@ -402,11 +414,11 @@
 
           <div class="relative z-10 flex flex-col items-center">
             <div
-              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-lg mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-md mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
             >
               1
             </div>
-            <h4 class="text-2xl font-bold mb-4 text-emerald-400">
+            <h4 class="text-xl font-bold mb-4 text-emerald-400">
               Map Your Project Intelligence
             </h4>
             <p class="text-slate-300 leading-relaxed max-w-xl">
@@ -419,11 +431,11 @@
 
           <div class="relative z-10 flex flex-col items-center">
             <div
-              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-lg mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-md mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
             >
               2
             </div>
-            <h4 class="text-2xl font-bold mb-4 text-emerald-400">
+            <h4 class="text-xl font-bold mb-4 text-emerald-400">
               Synthesize the Technical Draft
             </h4>
             <p class="text-slate-300 leading-relaxed max-w-xl">
@@ -436,11 +448,11 @@
 
           <div class="relative z-10 flex flex-col items-center">
             <div
-              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-lg mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-md mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
             >
               3
             </div>
-            <h4 class="text-2xl font-bold mb-4 text-emerald-400">
+            <h4 class="text-xl font-bold mb-4 text-emerald-400">
               Maintain Real-Time Parity
             </h4>
             <p class="text-slate-300 leading-relaxed max-w-xl">
