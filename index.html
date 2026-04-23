@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Eliminate documentation drift. Pearaty uses AI to automatically sync your GitHub code changes with Confluence and Google Docs."
+      content="Stop paying the 15% documentation tax. Pearaty automates your documentation lifecycle from requirements to real-time code sync."
     />
-    <title>Pearaty | Documentation that Updates as You Code</title>
+    <title>Pearaty | Automate Your Documentation Lifecycle</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
@@ -87,11 +87,11 @@
           display: none;
         }
         .hero-copy {
-          font-size: 20px;
+          font-size: 18px;
         }
       }
 
-      #problem {
+      #utility {
         background-color: aliceblue;
       }
     </style>
@@ -135,9 +135,9 @@
             >Home <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i
           ></a>
           <a
-            href="#problem"
+            href="#utility"
             class="mobile-link hover:text-emerald-600 transition flex items-center justify-between"
-            >The Problem
+            >The Utility
             <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i
           ></a>
           <a
@@ -175,8 +175,8 @@
           class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600"
         >
           <a href="#top" class="hover:text-emerald-600 transition">Home</a>
-          <a href="#problem" class="hover:text-emerald-600 transition"
-            >The Problem</a
+          <a href="#utility" class="hover:text-emerald-600 transition"
+            >The Utility</a
           >
           <a href="#how-it-works" class="hover:text-emerald-600 transition"
             >How it Works</a
@@ -192,33 +192,136 @@
       </div>
     </nav>
 
-    <header class="pt-16 pb-12 px-6">
-      <div class="max-w-5xl mx-auto text-center">
+    <header class="pt-20 pb-16 px-6">
+      <div class="max-w-6xl mx-auto text-center">
         <h1
-          class="text-3xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.15]"
+          class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.15]"
         >
-          Documentation that <br />
-          <span class="gradient-text">Updates as You Code.</span>
+          Stop paying the 25% <br />
+          <span class="gradient-text">Documentation Tax.</span>
         </h1>
-        <p
-          class="hero-copy md:text-2xl text-base text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed px-2"
-        >
-          Stop letting your technical docs drift. Pearaty uses AI to detect code
-          changes in your repositories and automatically suggests updates for
-          related technical documentation.
+
+        <p class="text-lg md:text-xl text-slate-600 font-medium mb-12">
+          In the age of AI, manual documentation is a relic of the past.
         </p>
+
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
+          <div
+            class="text-left bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-200 transition-all"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 bg-emerald-50 rounded-lg text-emerald-600">
+                <i data-lucide="git-branch" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-lg">
+                Continuous Technical Integration
+              </h3>
+            </div>
+            <ul class="space-y-4 text-slate-600 text-sm md:text-base">
+              <li class="flex gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5"
+                ></i>
+                <span
+                  ><strong>Automated Context Synthesis:</strong> Skip manual
+                  discovery when documenting new features. Pearaty synthesizes
+                  project intelligence into technical starting points,
+                  eliminating the overhead of manual research.</span
+                >
+              </li>
+              <li class="flex gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5"
+                ></i>
+                <span
+                  ><strong>Accelerated System Onboarding:</strong> Reduce
+                  ramp-up time caused by outdated documentation. A real-time map
+                  of the technical landscape empowers engineers to onboard
+                  faster, independently, and with more confidence.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="text-left bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-all"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 bg-blue-50 rounded-lg text-blue-600">
+                <i data-lucide="ship" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-lg">
+                Continuous Technical Delivery
+              </h3>
+            </div>
+            <ul class="space-y-4 text-slate-600 text-sm md:text-base">
+              <li class="flex gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"
+                ></i>
+                <span
+                  ><strong>Continuous Logic Parity:</strong> Documentation
+                  evolves in lockstep with every code change. Maintain a
+                  high-fidelity source of truth to eliminate documentation debt
+                  and keep development cycles moving fast.</span
+                >
+              </li>
+              <li class="flex gap-3">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"
+                ></i>
+                <span
+                  ><strong>Self-Serve Technical Truth:</strong> Enable
+                  architects and stakeholders to understand system flows
+                  independently. A reliable, never-stale source of truth allows
+                  for verification of product behavior without interrupting
+                  engineering focus.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p
+          class="text-slate-500 font-medium mb-10 max-w-3xl mx-auto leading-relaxed px-4"
+        >
+          Pearaty maintains a level of technical depth and accuracy that manual
+          efforts struggle to sustain—enabling leaner teams to ship faster and
+          scale without the overhead.
+        </p>
+
+        <div
+          class="flex flex-wrap items-center justify-center gap-6 md:gap-12 text-slate-400 text-xs md:text-sm font-bold uppercase tracking-widest border-t border-slate-100 pt-8"
+        >
+          <div class="flex items-center gap-2">
+            <i data-lucide="zap" class="w-4 h-4 text-emerald-400"></i> Higher
+            Velocity
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-blue-400"></i>
+            Zero-Drift Accuracy
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="trending-up" class="w-4 h-4 text-purple-400"></i>
+            Leaner Scaling
+          </div>
+        </div>
       </div>
     </header>
 
     <section class="py-12 border-y border-slate-200 bg-white">
-      <div class="max-w-4xl mx-auto px-6">
+      <div class="max-w-5xl mx-auto px-6">
         <p
           class="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-slate-400 text-center mb-10"
         >
           Seamlessly Integrates With Your Stack
         </p>
         <div
-          class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 opacity-50 grayscale contrast-125 items-center justify-items-center"
+          class="grid grid-cols-3 md:grid-cols-5 gap-8 md:gap-12 opacity-50 grayscale contrast-125 items-center justify-items-center"
         >
           <span class="font-bold text-sm md:text-xl tracking-tighter"
             >GITHUB</span
@@ -232,66 +335,138 @@
           <span class="font-bold text-sm md:text-xl tracking-tighter uppercase"
             >Google Docs</span
           >
+          <span
+            class="font-bold text-sm md:text-xl tracking-tighter uppercase col-span-3 md:col-span-1"
+            >Slack</span
+          >
         </div>
       </div>
     </section>
 
-    <div id="problem" class="bg-slate-100/50 border-b border-slate-200">
+    <div id="utility" class="bg-slate-100/50 border-b border-slate-200">
       <section class="py-20 px-6">
         <div class="max-w-7xl mx-auto text-center">
-          <h2 class="text-2xl md:text-4xl font-bold mb-4 px-2">
-            Outdated Docs are a Business Risk.
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 px-2">
+            The Pearaty Utility Set
           </h2>
-          <div class="grid md:grid-cols-3 gap-6 text-left mt-12 md:mt-16">
+          <p class="text-slate-600 mb-12 md:mb-16 max-w-2xl mx-auto">
+            A grounded approach to keeping your technical intelligence in
+            permanent parity with your live production environment.
+          </p>
+          <div class="grid md:grid-cols-3 gap-6 text-left">
             <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm"
+              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
             >
               <div
-                class="w-10 h-10 md:w-12 md:h-12 bg-red-50 text-red-600 rounded-lg flex items-center justify-center mb-6"
+                class="w-10 h-10 md:w-12 md:h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6"
               >
-                <i data-lucide="clock" class="w-5 h-5 md:w-6 md:h-6"></i>
+                <i data-lucide="file-plus" class="w-5 h-5 md:w-6 md:h-6"></i>
               </div>
               <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                Wasted Senior Hours
+                Requirement-to-Draft
               </h3>
               <p class="text-sm md:text-base text-slate-600">
-                Manual documentation sucks 20% of your top talent's focus. Let
-                them ship code instead.
+                <strong class="text-slate-800"
+                  >Eliminate the Blank Page.</strong
+                >
+                Pearaty analyzes requirements and epics to generate a structured
+                technical starting point, letting engineers focus on refining
+                details rather than building templates.
               </p>
             </div>
             <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm"
+              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
             >
               <div
-                class="w-10 h-10 md:w-12 md:h-12 bg-orange-50 text-orange-600 rounded-lg flex items-center justify-center mb-6"
+                class="w-10 h-10 md:w-12 md:h-12 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center mb-6"
               >
-                <i data-lucide="zap" class="w-5 h-5 md:w-6 md:h-6"></i>
+                <i data-lucide="refresh-cw" class="w-5 h-5 md:w-6 md:h-6"></i>
               </div>
               <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                The 2-Week Ramp-up
+                Continuous Parity
               </h3>
               <p class="text-sm md:text-base text-slate-600">
-                New hires ship faster when the "Source of Truth" actually
-                matches the current source code.
+                <strong class="text-slate-800">Sync as You Ship.</strong>
+                Documentation shouldn’t be a post-sprint chore. Pearaty monitors
+                code changes and suggests updates in real-time to evolve
+                alongside your codebase.
               </p>
             </div>
             <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm"
+              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
             >
               <div
                 class="w-10 h-10 md:w-12 md:h-12 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center mb-6"
               >
+                <i data-lucide="target" class="w-5 h-5 md:w-6 md:h-6"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
+                Production-Live Accuracy
+              </h3>
+              <p class="text-sm md:text-base text-slate-600">
+                <strong class="text-slate-800">End Documentation Drift.</strong>
+                Close the gap between what is written and what is actually live.
+                Eliminate the guesswork and confusion during incident support
+                and system audits.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
+            >
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-6"
+              >
                 <i
-                  data-lucide="alert-triangle"
+                  data-lucide="message-square"
                   class="w-5 h-5 md:w-6 md:h-6"
                 ></i>
               </div>
               <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                Outdated Runbooks
+                Capture Chat Intelligence
               </h3>
               <p class="text-sm md:text-base text-slate-600">
-                Production incidents are prolonged by engineers following
-                technical guides that no longer apply.
+                <strong class="text-slate-800"
+                  >Tribal Knowledge, Documented.</strong
+                >
+                Pearaty integrates with Slack to reference team discussions. It
+                uses chat context to inform doc updates, ensuring the "why"
+                isn't lost in a thread.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
+            >
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center mb-6"
+              >
+                <i data-lucide="terminal" class="w-5 h-5 md:w-6 md:h-6"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
+                Direct Chat Interaction
+              </h3>
+              <p class="text-sm md:text-base text-slate-600">
+                <strong class="text-slate-800">Documentation on Demand.</strong>
+                Interact directly within your team chat. Query your docs,
+                trigger updates, or verify system logic without leaving your
+                primary communication workflow.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
+            >
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 bg-slate-100 text-slate-700 rounded-lg flex items-center justify-center mb-6"
+              >
+                <i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
+                Secure & Turn-Key
+              </h3>
+              <p class="text-sm md:text-base text-slate-600">
+                <strong class="text-slate-800">Enterprise Ready.</strong> A
+                fully managed, secure cloud solution that integrates with your
+                Git providers and chat tools in minutes—no infrastructure to
+                manage or complex deployments.
               </p>
             </div>
           </div>
@@ -317,11 +492,12 @@
                   <h4
                     class="text-lg md:text-xl font-bold mb-2 text-emerald-400"
                   >
-                    Connect Your Repo
+                    Connect Your Stack
                   </h4>
                   <p class="text-sm md:text-base text-slate-400">
-                    Pearaty monitors your GitHub or GitLab branches for
-                    technical shifts in real-time.
+                    Pearaty integrates securely with your Git repositories,
+                    issue trackers, and team chat channels to capture intent and
+                    code changes.
                   </p>
                 </div>
               </div>
@@ -335,11 +511,12 @@
                   <h4
                     class="text-lg md:text-xl font-bold mb-2 text-emerald-400"
                   >
-                    AI Mapping
+                    AI Mapping & Drafting
                   </h4>
                   <p class="text-sm md:text-base text-slate-400">
-                    Our engine analyzes changes and automatically maps them to
-                    relevant doc pages.
+                    Our engine generates initial drafts from requirements and
+                    automatically maps live code shifts to your existing
+                    documentation.
                   </p>
                 </div>
               </div>
@@ -357,7 +534,8 @@
                   </h4>
                   <p class="text-sm md:text-base text-slate-400">
                     Accept AI-suggested documentation updates with one click to
-                    keep everything in sync.
+                    keep your company's technical intelligence in real-time
+                    sync.
                   </p>
                 </div>
               </div>
