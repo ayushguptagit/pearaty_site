@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Stop paying the 15% documentation tax. Pearaty automates your documentation lifecycle from requirements to real-time code sync."
+      content="Stop paying the 25% documentation tax. Pearaty automates your documentation lifecycle from synthesis to real-time logic parity."
     />
     <title>Pearaty | Automate Your Documentation Lifecycle</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,13 +26,9 @@
       html {
         scroll-behavior: smooth;
       }
-
-      /* Prevent "tight" scroll alignment under sticky nav */
       [id] {
         scroll-margin-top: 50px;
       }
-
-      /* Modal Styling */
       .modal {
         display: none;
         position: fixed;
@@ -43,23 +39,18 @@
         height: 100%;
         background-color: rgba(15, 23, 42, 0.95);
         backdrop-filter: blur(8px);
-        cursor: zoom-out;
       }
       .modal-content {
         margin: auto;
         display: block;
         width: 90%;
         max-width: 1100px;
-        max-height: 90vh;
-        object-fit: contain;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 12px;
       }
-
-      /* Mobile Menu Fade - Optimized for logo parity */
       #mobile-menu {
         opacity: 0;
         pointer-events: none;
@@ -69,7 +60,6 @@
         opacity: 1;
         pointer-events: auto;
       }
-
       @media (min-width: 769px) {
         .clickable-img {
           cursor: zoom-in;
@@ -78,21 +68,6 @@
         .clickable-img:hover {
           transform: scale(1.02);
         }
-        .expand-hint {
-          display: block;
-        }
-      }
-      @media (max-width: 768px) {
-        .expand-hint {
-          display: none;
-        }
-        .hero-copy {
-          font-size: 18px;
-        }
-      }
-
-      #utility {
-        background-color: aliceblue;
       }
     </style>
   </head>
@@ -170,7 +145,6 @@
           </div>
           <span class="text-xl font-extrabold tracking-tight">Pearaty</span>
         </div>
-
         <div
           class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600"
         >
@@ -185,7 +159,6 @@
             >Contact</a
           >
         </div>
-
         <button id="menu-toggle" class="md:hidden text-slate-600 p-2">
           <i data-lucide="menu"></i>
         </button>
@@ -313,7 +286,7 @@
       </div>
     </header>
 
-    <section class="py-12 border-y border-slate-200 bg-white">
+    <!-- <section class="py-12 border-y border-slate-200 bg-white">
       <div class="max-w-5xl mx-auto px-6">
         <p
           class="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-slate-400 text-center mb-10"
@@ -321,261 +294,179 @@
           Seamlessly Integrates With Your Stack
         </p>
         <div
-          class="grid grid-cols-3 md:grid-cols-5 gap-8 md:gap-12 opacity-50 grayscale contrast-125 items-center justify-items-center"
+          class="grid grid-cols-2 md:grid-cols-5 gap-8 opacity-40 grayscale items-center justify-items-center font-bold text-xs md:text-sm tracking-widest"
         >
-          <span class="font-bold text-sm md:text-xl tracking-tighter"
-            >GITHUB</span
-          >
-          <span class="font-bold text-sm md:text-xl tracking-tighter"
-            >GITLAB</span
-          >
-          <span class="font-bold text-sm md:text-xl tracking-tighter uppercase"
-            >Confluence</span
-          >
-          <span class="font-bold text-sm md:text-xl tracking-tighter uppercase"
-            >Google Docs</span
-          >
-          <span
-            class="font-bold text-sm md:text-xl tracking-tighter uppercase col-span-3 md:col-span-1"
-            >Slack</span
-          >
+          <span>GITHUB</span><span>GITLAB</span><span>CONFLUENCE</span
+          ><span>GOOGLE DOCS</span
+          ><span class="col-span-2 md:col-span-1">SLACK</span>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <div id="utility" class="bg-slate-100/50 border-b border-slate-200">
-      <section class="py-20 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4 px-2">
-            The Pearaty Utility Set
-          </h2>
-          <p class="text-slate-600 mb-12 md:mb-16 max-w-2xl mx-auto">
-            A grounded approach to keeping your technical intelligence in
-            permanent parity with your live production environment.
-          </p>
-          <div class="grid md:grid-cols-3 gap-6 text-left">
-            <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
-            >
-              <div
-                class="w-10 h-10 md:w-12 md:h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6"
-              >
-                <i data-lucide="file-plus" class="w-5 h-5 md:w-6 md:h-6"></i>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                Requirement-to-Draft
-              </h3>
-              <p class="text-sm md:text-base text-slate-600">
-                <strong class="text-slate-800"
-                  >Eliminate the Blank Page.</strong
-                >
-                Pearaty analyzes requirements and epics to generate a structured
-                technical starting point, letting engineers focus on refining
-                details rather than building templates.
-              </p>
-            </div>
-            <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
-            >
-              <div
-                class="w-10 h-10 md:w-12 md:h-12 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center mb-6"
-              >
-                <i data-lucide="refresh-cw" class="w-5 h-5 md:w-6 md:h-6"></i>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                Continuous Parity
-              </h3>
-              <p class="text-sm md:text-base text-slate-600">
-                <strong class="text-slate-800">Sync as You Ship.</strong>
-                Documentation shouldn’t be a post-sprint chore. Pearaty monitors
-                code changes and suggests updates in real-time to evolve
-                alongside your codebase.
-              </p>
-            </div>
-            <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
-            >
-              <div
-                class="w-10 h-10 md:w-12 md:h-12 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center mb-6"
-              >
-                <i data-lucide="target" class="w-5 h-5 md:w-6 md:h-6"></i>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                Production-Live Accuracy
-              </h3>
-              <p class="text-sm md:text-base text-slate-600">
-                <strong class="text-slate-800">End Documentation Drift.</strong>
-                Close the gap between what is written and what is actually live.
-                Eliminate the guesswork and confusion during incident support
-                and system audits.
-              </p>
-            </div>
-            <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
-            >
-              <div
-                class="w-10 h-10 md:w-12 md:h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-6"
-              >
-                <i
-                  data-lucide="message-square"
-                  class="w-5 h-5 md:w-6 md:h-6"
-                ></i>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                Capture Chat Intelligence
-              </h3>
-              <p class="text-sm md:text-base text-slate-600">
-                <strong class="text-slate-800"
-                  >Tribal Knowledge, Documented.</strong
-                >
-                Pearaty integrates with Slack to reference team discussions. It
-                uses chat context to inform doc updates, ensuring the "why"
-                isn't lost in a thread.
-              </p>
-            </div>
-            <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
-            >
-              <div
-                class="w-10 h-10 md:w-12 md:h-12 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center mb-6"
-              >
-                <i data-lucide="terminal" class="w-5 h-5 md:w-6 md:h-6"></i>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                Direct Chat Interaction
-              </h3>
-              <p class="text-sm md:text-base text-slate-600">
-                <strong class="text-slate-800">Documentation on Demand.</strong>
-                Interact directly within your team chat. Query your docs,
-                trigger updates, or verify system logic without leaving your
-                primary communication workflow.
-              </p>
-            </div>
-            <div
-              class="bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
-            >
-              <div
-                class="w-10 h-10 md:w-12 md:h-12 bg-slate-100 text-slate-700 rounded-lg flex items-center justify-center mb-6"
-              >
-                <i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6"></i>
-              </div>
-              <h3 class="text-lg md:text-xl font-bold mb-3 text-slate-900">
-                Secure & Turn-Key
-              </h3>
-              <p class="text-sm md:text-base text-slate-600">
-                <strong class="text-slate-800">Enterprise Ready.</strong> A
-                fully managed, secure cloud solution that integrates with your
-                Git providers and chat tools in minutes—no infrastructure to
-                manage or complex deployments.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <section
+      id="utility"
+      class="py-20 px-6 border-y border-slate-200 bg-slate-100"
+    >
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          The Pearaty Utility Set
+        </h2>
+        <p class="text-slate-600 mb-16 max-w-2xl mx-auto">
+          Moving beyond static files to a system that understands the nuance and
+          evolution of your codebase.
+        </p>
 
-    <section id="how-it-works" class="py-20 bg-slate-900 text-white px-6">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-              Automate Documentation Parity.
-            </h2>
-            <div class="space-y-6 md:space-y-10">
-              <div class="flex gap-4">
-                <div
-                  class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-sm"
-                >
-                  1
-                </div>
-                <div>
-                  <h4
-                    class="text-lg md:text-xl font-bold mb-2 text-emerald-400"
-                  >
-                    Connect Your Stack
-                  </h4>
-                  <p class="text-sm md:text-base text-slate-400">
-                    Pearaty integrates securely with your Git repositories,
-                    issue trackers, and team chat channels to capture intent and
-                    code changes.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <div
-                  class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-sm"
-                >
-                  2
-                </div>
-                <div>
-                  <h4
-                    class="text-lg md:text-xl font-bold mb-2 text-emerald-400"
-                  >
-                    AI Mapping & Drafting
-                  </h4>
-                  <p class="text-sm md:text-base text-slate-400">
-                    Our engine generates initial drafts from requirements and
-                    automatically maps live code shifts to your existing
-                    documentation.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4">
-                <div
-                  class="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-sm"
-                >
-                  3
-                </div>
-                <div>
-                  <h4
-                    class="text-lg md:text-xl font-bold mb-2 text-emerald-400"
-                  >
-                    Review & Merge
-                  </h4>
-                  <p class="text-sm md:text-base text-slate-400">
-                    Accept AI-suggested documentation updates with one click to
-                    keep your company's technical intelligence in real-time
-                    sync.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="grid md:grid-cols-3 gap-8 text-left">
           <div
-            class="bg-slate-800 rounded-3xl p-3 md:p-4 border border-slate-700 shadow-2xl"
+            class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
           >
-            <picture>
-              <source
-                srcset="pearaty-flow-mobile.jpg"
-                media="(max-width: 600px)"
-              />
-              <img
-                id="flowImage"
-                src="pearaty-flow.png"
-                alt="Pearaty Sync Workflow"
-                class="w-full h-auto rounded-2xl clickable-img"
-              />
-            </picture>
-            <p
-              class="expand-hint text-center text-slate-500 text-[10px] mt-3 uppercase tracking-widest"
+            <div
+              class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center mb-6"
             >
-              Click to Expand Workflow
+              <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">
+              Project Context Synthesis
+            </h3>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+              The first few days of any new feature are usually spent in
+              "archaeology mode"—hunting through old PRs, digging up requirement
+              docs, and cross-referencing Slack threads. Pearaty does this
+              reconnaissance for you, synthesizing your project's history into a
+              structured technical baseline so you can start building
+              immediately.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
+          >
+            <div
+              class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i data-lucide="git-compare" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">
+              Logic-to-Doc Parity
+            </h3>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+              Documentation typically dies the moment the code is merged.
+              Pearaty treats your documentation like a live build artifact. By
+              monitoring logic shifts in your codebase, it identifies when a
+              "truth" has changed and prepares the necessary updates, ensuring
+              your knowledge base evolves in lockstep with your production
+              environment.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
+          >
+            <div
+              class="w-12 h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">
+              Self-Serve Technical Truth
+            </h3>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+              When documentation is stale, engineers become the "human search
+              engine" for the rest of the company. Pearaty provides architects,
+              product managers, and support leads with a reliable, updated map
+              of how the system works. This empowers stakeholders to find their
+              own answers, protecting your team's deep-work hours.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="py-20 px-6 text-center">
-      <div id="contact" class="max-w-3xl mx-auto">
+    <section id="how-it-works" class="py-24 bg-slate-900 text-white px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-white"
+        >
+          Automating the Path to <br />
+          <span class="text-emerald-400">Technical Clarity.</span>
+        </h2>
+        <p class="text-slate-400 text-lg mb-16 max-w-2xl mx-auto">
+          From initial discovery to long-term parity, Pearaty manages the
+          technical knowledge lifecycle so your engineers don't have to.
+        </p>
+
+        <div class="space-y-16 relative">
+          <div
+            class="absolute top-0 bottom-0 left-1/2 w-px bg-slate-800 -translate-x-1/2 hidden md:block"
+          ></div>
+
+          <div class="relative z-10 flex flex-col items-center">
+            <div
+              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-lg mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+            >
+              1
+            </div>
+            <h4 class="text-2xl font-bold mb-4 text-emerald-400">
+              Map Your Project Intelligence
+            </h4>
+            <p class="text-slate-300 leading-relaxed max-w-xl">
+              Connect Pearaty to your development stack. The engine immediately
+              begins analyzing your codebase, requirements, and historical
+              context to build a mental model of your system's unique logic and
+              architecture.
+            </p>
+          </div>
+
+          <div class="relative z-10 flex flex-col items-center">
+            <div
+              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-lg mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+            >
+              2
+            </div>
+            <h4 class="text-2xl font-bold mb-4 text-emerald-400">
+              Synthesize the Technical Draft
+            </h4>
+            <p class="text-slate-300 leading-relaxed max-w-xl">
+              When you start a new feature, Pearaty does the heavy lifting. It
+              assembles fragmented context into a comprehensive starting draft,
+              allowing your engineers to focus on refining the strategy rather
+              than wrestling with a blank page.
+            </p>
+          </div>
+
+          <div class="relative z-10 flex flex-col items-center">
+            <div
+              class="w-12 h-12 bg-emerald-500 text-slate-900 rounded-full flex items-center justify-center font-extrabold text-lg mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+            >
+              3
+            </div>
+            <h4 class="text-2xl font-bold mb-4 text-emerald-400">
+              Maintain Real-Time Parity
+            </h4>
+            <p class="text-slate-300 leading-relaxed max-w-xl">
+              As logic evolves and code is merged, Pearaty identifies the
+              documentation delta. It suggests updates in real-time, ensuring
+              your knowledge base remains a living, high-fidelity source of
+              truth that stays in sync with every release.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="py-24 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8">
+          Ready to reclaim your engineering velocity?
+        </h2>
         <button
           id="contact-button"
-          class="bg-emerald-600 text-white px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold text-lg md:text-xl hover:bg-emerald-700 shadow-2xl shadow-emerald-200 transition-all active:scale-95"
+          class="bg-emerald-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-emerald-700 shadow-2xl transition-all active:scale-95"
         >
           Contact us to learn more
         </button>
         <div
-          class="mt-16 pt-8 border-t border-slate-200 text-slate-400 text-xs md:text-sm"
+          class="mt-20 pt-8 border-t border-slate-200 text-slate-400 text-sm"
         >
           &copy; 2026 Pearaty. All rights reserved.
         </div>
@@ -584,7 +475,6 @@
 
     <script>
       lucide.createIcons();
-
       const menuToggle = document.getElementById("menu-toggle");
       const closeMenu = document.getElementById("close-menu");
       const mobileMenu = document.getElementById("mobile-menu");
@@ -626,15 +516,18 @@
       const modalImg = document.getElementById("modalImg");
 
       img.onclick = function () {
-        if (window.innerWidth > 768) {
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          document.body.style.overflow = "hidden";
-        }
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        document.body.style.overflow = "hidden";
       };
-      modal.onclick = function () {
+      modal.onclick = () => {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
+      };
+
+      document.getElementById("contact-button").onclick = () => {
+        window.location.href =
+          "mailto:contact@pearaty.com?subject=Pearaty Demo Request";
       };
     </script>
   </body>
