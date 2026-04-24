@@ -14,62 +14,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .gradient-text {
-        background: linear-gradient(90deg, #10b981, #3b82f6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      [id] {
-        scroll-margin-top: 50px;
-      }
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(15, 23, 42, 0.95);
-        backdrop-filter: blur(8px);
-      }
-      .modal-content {
-        margin: auto;
-        display: block;
-        width: 90%;
-        max-width: 1100px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 12px;
-      }
-      #mobile-menu {
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.2s ease-in-out;
-      }
-      #mobile-menu.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      @media (min-width: 769px) {
-        .clickable-img {
-          cursor: zoom-in;
-          transition: transform 0.3s ease;
-        }
-        .clickable-img:hover {
-          transform: scale(1.02);
-        }
-      }
-    </style>
+    <link href="styles.css" rel="stylesheet" />
   </head>
   <body class="bg-slate-50 text-slate-900 antialiased">
     <div id="top"></div>
@@ -166,7 +111,7 @@
     </nav>
 
     <header class="pt-20 pb-16 px-6">
-      <div class="max-w-6xl mx-auto text-center">
+      <div class="max-w-7xl mx-auto text-center">
         <h1
           class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.15]"
         >
@@ -178,12 +123,12 @@
           In the age of AI, manual documentation is a relic of the past.
           <br />Pearaty automates the entire lifecycle of your technical truth.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 text-left">
           <div
             class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md border-blue-100"
           >
             <div
-              class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6"
+              class="w-12 h-12 bg-sky-50 text-sky-600 rounded-lg flex items-center justify-center mb-6"
             >
               <i data-lucide="refresh-ccw" class="w-6 h-6"></i>
             </div>
@@ -200,7 +145,7 @@
             class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
           >
             <div
-              class="w-12 h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-6"
+              class="w-12 h-12 text-blue-600 bg-blue-50 rounded-lg flex items-center justify-center mb-6"
             >
               <i data-lucide="binary" class="w-6 h-6"></i>
             </div>
@@ -217,7 +162,7 @@
             class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
           >
             <div
-              class="w-12 h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-6"
+              class="w-12 h-12 text-violet-600 bg-violet-50 rounded-lg flex items-center justify-center mb-6"
             >
               <i data-lucide="rocket" class="w-6 h-6"></i>
             </div>
@@ -228,6 +173,23 @@
               Eliminate the documentation tax to allow leaner teams to stay
               focused on innovating and scaling your products, ensuring that
               growing your features doesn't mean growing your overhead.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md"
+          >
+            <div
+              class="w-12 h-12 text-emerald-600 bg-emerald-50 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">
+              Architected for Privacy
+            </h3>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+              Pearaty is built on a foundation that prioritizes data privacy,
+              ensuring that your proprietary data remains strictly isolated,
+              secure, and never used for model training.
             </p>
           </div>
         </div>
@@ -469,33 +431,6 @@
               >Azure DevOps</span
             >
           </div>
-          <div
-            class="bg-slate-900/40 border border-slate-800/50 p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-slate-700 transition-all hover:bg-slate-900/60 group"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg"
-              alt="Slack"
-              class="h-8 w-auto opacity-80 group-hover:opacity-100 transition-opacity"
-            />
-            <span
-              class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 group-hover:text-slate-300"
-              >Slack</span
-            >
-          </div>
-
-          <div
-            class="bg-slate-900/40 border border-slate-800/50 p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-slate-700 transition-all hover:bg-slate-900/60 group"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/50/Microsoft_Teams.png"
-              alt="Teams"
-              class="h-8 w-auto opacity-80 group-hover:opacity-100 transition-opacity"
-            />
-            <span
-              class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 group-hover:text-slate-300"
-              >Teams</span
-            >
-          </div>
         </div>
       </div>
     </section>
@@ -515,62 +450,6 @@
       </div>
     </footer>
 
-    <script>
-      lucide.createIcons();
-      const menuToggle = document.getElementById("menu-toggle");
-      const closeMenu = document.getElementById("close-menu");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const mobileLinks = document.querySelectorAll(".mobile-link");
-
-      const openMenu = () => {
-        mobileMenu.classList.add("active");
-        document.body.style.overflow = "hidden";
-      };
-
-      const hideMenu = () => {
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "auto";
-      };
-
-      menuToggle.addEventListener("click", openMenu);
-      closeMenu.addEventListener("click", (e) => {
-        e.stopPropagation();
-        hideMenu();
-      });
-      mobileMenu.addEventListener("click", (e) => {
-        if (e.target === mobileMenu) hideMenu();
-      });
-      mobileLinks.forEach((link) => link.addEventListener("click", hideMenu));
-
-      (function () {
-        const btn = document.getElementById("contact-button");
-        if (btn) {
-          btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            window.location.href =
-              "mailto:contact@pearaty.com?subject=Demo Request";
-          });
-        }
-      })();
-
-      const modal = document.getElementById("imageModal");
-      const img = document.getElementById("flowImage");
-      const modalImg = document.getElementById("modalImg");
-
-      img.onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        document.body.style.overflow = "hidden";
-      };
-      modal.onclick = () => {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-      };
-
-      document.getElementById("contact-button").onclick = () => {
-        window.location.href =
-          "mailto:contact@pearaty.com?subject=Pearaty Demo Request";
-      };
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
