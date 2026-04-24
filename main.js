@@ -30,7 +30,7 @@ lucide.createIcons();
           btn.addEventListener("click", (e) => {
             e.preventDefault();
             window.location.href =
-              "mailto:contact@pearaty.com?subject=Demo Request";
+              "mailto:contact@pearaty.com";
           });
         }
       })();
@@ -51,5 +51,5 @@ lucide.createIcons();
 
       document.getElementById("contact-button").onclick = () => {
         window.location.href =
-          "mailto:contact@pearaty.com?subject=Pearaty Demo Request";
+          "mailto:contact@pearaty.com";
       };
