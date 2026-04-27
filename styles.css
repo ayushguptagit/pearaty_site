@@ -61,3 +61,17 @@ html {
         transform: scale(1.02);
     }
 }
+
+
+.highlight-soft {
+    background-color: rgba(16, 185, 129, 0.08);
+    padding: 0 2px;
+    border-radius: 4px;
+    color: #059669;
+    font-weight: 700;
+}
+
+.highlight-bold {
+    color: #0f172a;
+    font-weight: 800;
+}
